@@ -4,6 +4,11 @@ pipeline{
     maven 'M2_HOME'
    }
     stages{
+        stage("Sonar-scan"){
+            steps{
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jpdevops2024_geolocation2'
+            }
+        }
         stage("Maven"){
             steps{
         sh 'mvn clean'
