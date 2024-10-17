@@ -6,7 +6,10 @@ pipeline{
     stages{
         stage("Sonar-scan"){
             steps{
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jpdevops2024_geolocation2'
+                withSonarQubeEnv('sonarQube'){
+        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jpdevops2024_geolocation2'
+                }
+                
             }
         }
         stage("Maven"){
