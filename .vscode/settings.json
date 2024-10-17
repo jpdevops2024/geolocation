@@ -1,4 +1,11 @@
 {
     "workbench.colorCustomizations": {},
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "folder-color.pathColors": [
+        {
+            "folderPath": "geolocation/pom.xml/",
+            "color": "foldercolorizer.GrayishSilver"
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
